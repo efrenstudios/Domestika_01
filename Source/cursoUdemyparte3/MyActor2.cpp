@@ -15,7 +15,4 @@ void AMyActor2::Tick(float DeltaTime)
 	AddActorLocalRotation(rotacion,true);
 }
 
-void AMyActor2::BeginPlay()
-{
-	GetWorld()->SpawnActor<AActor>();
-}
+

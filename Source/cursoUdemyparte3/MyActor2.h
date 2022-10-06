@@ -27,12 +27,10 @@ public:
 	FVector velocity;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	FRotator rotacion;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	TSubclassOf<class AActor>objetoASpawnear;
+	
 
-protected:
 
-	virtual void BeginPlay()override;
+
 public:
 	AMyActor2();
 	virtual void Tick(float DeltaTime)override;
