@@ -22,6 +22,8 @@ public:
 	FTimerHandle timerShootHandle;
 	FTimerHandle timerStopShootHandle;
 
+
+
 	UPROPERTY(EditAnywhere)
 	float tiempoPararRotate;
 	UPROPERTY(EditAnywhere)
@@ -43,4 +45,5 @@ public:
 
 	void Rotate();
 	void StopRotate();
+
 };

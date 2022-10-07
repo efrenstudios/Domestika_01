@@ -20,6 +20,7 @@ void AMyActor::BeginPlay()
 
 	//ejecuta Shoot cada cierta cantidad de tiempo y se repita indefinidamente
 	GetWorldTimerManager().SetTimer(timerShootHandle, this, &AMyActor::Shoot, tiempoEntreDisparo, true);
+
 }
 
 void AMyActor::Shoot()
@@ -49,10 +50,16 @@ void AMyActor::Rotate()
 
 void AMyActor::StopRotate()
 {
+	Destroy();
+
 	//detengo la rotacion
 	GetWorldTimerManager().ClearTimer(timerRotateHandle);
 	//vuelvo a programar Stop Shoot para frenar los disparos
-	GetWorldTimerManager().SetTimer(timerStopShootHandle, this, &AMyActor::StopShoot, tiempoPararDisparo);
+	//GetWorldTimerManager().SetTimer(timerStopShootHandle, this, &AMyActor::StopShoot, tiempoPararDisparo);
 	//vuelvo a programar Shoot cada cierta cantidad de tiempo y se repita indefinidamente
-	GetWorldTimerManager().SetTimer(timerShootHandle, this, &AMyActor::Shoot, tiempoEntreDisparo, true);
+	//GetWorldTimerManager().SetTimer(timerShootHandle, this, &AMyActor::Shoot, tiempoEntreDisparo, true);
+
+	
 }
+
+
