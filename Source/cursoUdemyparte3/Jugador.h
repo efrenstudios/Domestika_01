@@ -12,15 +12,21 @@ class CURSOUDEMYPARTE3_API AJugador : public APawn
 	GENERATED_BODY()
 
 public:
-	// Sets default values for this pawn's properties
+	
 	AJugador();
 
 protected:
-	// Called when the game starts or when spawned
+	
 	virtual void BeginPlay() override;
 
 public:	
-	
+	FTimerHandle fireTimer;
+
+	bool forwardPressed;
+
+	UPROPERTY(EditAnywhere)
+	float fireRate;
+
 	UPROPERTY(EditAnywhere)
 	float Velocity;
 	UPROPERTY(EditAnywhere)
@@ -29,11 +35,17 @@ public:
 	UPROPERTY(EditAnywhere)
 	TSubclassOf<class AActor> bulletBlueprint;
 
-	virtual void Tick(float DeltaTime) override;
+	virtual void Tick(float deltaSeconds) override;
 		
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 	
 	void VerticalAxis(float value);
 	void HorizontalAxis(float value);
 	void FirePressed();
+	void FireReleased();
+	void Fire();
+	void ForwardPressed();
+	void ForwardReleased();
+
+
 };
