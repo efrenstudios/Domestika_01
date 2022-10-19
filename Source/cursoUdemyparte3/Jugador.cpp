@@ -5,10 +5,12 @@
 #include "Components/InputComponent.h"
 #include "Engine/World.h"
 #include "TimerManager.h"
+#include "cursoUdemyparte3GameModeBase.h"
+
 
 AJugador::AJugador()
 {
- 	
+	
 	PrimaryActorTick.bCanEverTick = true;
 
 }
@@ -51,6 +53,9 @@ void AJugador::HorizontalAxis(float value)
 
 void AJugador::FirePressed()
 {
+	AcursoUdemyparte3GameModeBase* gameMode = GetWorld()->GetAuthGameMode<AcursoUdemyparte3GameModeBase>();
+	gameMode->puntajeActual += 50;
+
 		GetWorldTimerManager().SetTimer(fireTimer, this, &AJugador::Fire, fireRate, true);
 }
 

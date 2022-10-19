@@ -13,5 +13,27 @@ UCLASS()
 class CURSOUDEMYPARTE3_API AcursoUdemyparte3GameModeBase : public AGameModeBase
 {
 	GENERATED_BODY()
-	
+
+protected:
+
+	void BeginPlay() override;
+
+public:
+
+	FTimerHandle perderTimer;
+
+		UPROPERTY(VisibleAnywhere)
+		int puntajeActual;
+
+	    UPROPERTY(EditAnywhere)
+		int puntajeDeseado;
+
+		UPROPERTY(EditAnywhere)
+		float tiempoPerder;
+
+		AcursoUdemyparte3GameModeBase();
+
+		void Tick(float deltaSeconds) override;
+
+		void TimerPerder();
 };
