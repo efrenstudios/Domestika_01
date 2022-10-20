@@ -18,16 +18,20 @@ protected:
 	virtual void BeginPlay() override;
 
 public:	
-	
+
+	UPROPERTY(VisibleAnywhere)
+	class ACheckpoint* currentCheckpoint;
+
+	UPROPERTY(EditAnywhere)
 	FVector initialPosition;
 
-	
+	UPROPERTY(EditAnywhere)
 	FRotator initialRotate;
 
-	
+	UPROPERTY(EditAnywhere)
 	float initialLife;
 
-	
+	UPROPERTY(EditAnywhere)
 	int keys;
 	
 	UPROPERTY(EditAnywhere)

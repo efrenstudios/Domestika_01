@@ -14,4 +14,14 @@ class CURSOUDEMYPARTE3_API AGameModeBaseMovim : public AGameModeBase
 {
 	GENERATED_BODY()
 	
+public:
+	AGameModeBaseMovim();
+
+	UPROPERTY(VisibleAnywhere)
+		int pickedObjetives;
+
+	UPROPERTY(EditAnywhere)
+		int ObjetivesToPick;
+
+	void Tick(float deltaSeconds)override;
 };
