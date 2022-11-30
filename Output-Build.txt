@@ -1,0 +1,8 @@
+﻿1>------ Build started: Project: UE4, Configuration: BuiltWithUnrealBuildTool Win32 ------
+2>------ Build started: Project: CursoUdemy4Parte, Configuration: Development_Editor x64 ------
+2>Creating makefile for hot reloading CursoUdemy4ParteEditor (modules to compile have changed)
+2>Compiling game modules for hot reload
+2>Target is up to date
+2>Deploying CursoUdemy4ParteEditor Win64 Development...
+2>Total build time: 5.88 seconds (NoActionsToExecute executor: 0.00 seconds)
+========== Build: 2 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
